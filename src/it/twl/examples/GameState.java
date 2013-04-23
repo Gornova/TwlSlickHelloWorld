@@ -8,6 +8,8 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
 
+import de.matthiasmann.twl.BoxLayout;
+import de.matthiasmann.twl.BoxLayout.Direction;
 import de.matthiasmann.twl.Button;
 import de.matthiasmann.twl.DialogLayout;
 import de.matthiasmann.twl.DialogLayout.Group;
@@ -18,6 +20,7 @@ public class GameState extends BasicTWLGameState {
 	private DialogLayout helloPanel;
 	private DialogLayout buttonPanel;
 	private DialogLayout statusBar;
+	private BoxLayout box;
 
 	@Override
 	protected RootPane createRootPane() {
@@ -27,6 +30,7 @@ public class GameState extends BasicTWLGameState {
 		createGridPanel(rp);
 		createButton(rp);
 		createStatusBar(rp);
+		createBox(rp);
 		return rp;
 	}
 
@@ -124,6 +128,26 @@ public class GameState extends BasicTWLGameState {
 
 		rp.add(grid);
 	}
+
+	private void createBox(RootPane rp) {
+		box = new BoxLayout(Direction.VERTICAL);
+
+		Label label = new Label();
+		label.setText("1");
+
+		Label label2 = new Label();
+		label2.setText("2");
+
+		Label label3 = new Label();
+		label3.setText("3");
+
+		box.add(label);
+		box.add(label2);
+		box.add(label3);
+
+		rp.add(box);
+	}
+
 	@Override
 	protected void layoutRootPane() {
 		helloPanel.setPosition(100, 100);
@@ -137,6 +161,9 @@ public class GameState extends BasicTWLGameState {
 
 		statusBar.setPosition(0, 0);
 		statusBar.setSize(1024, 30);
+
+		box.setPosition(600, 600);
+		box.adjustSize();
 	}
 
 	@Override

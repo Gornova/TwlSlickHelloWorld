@@ -21,8 +21,7 @@ public class HelloWorldStateTwl extends TWLStateBasedGame {
 
 	@Override
 	public void initStatesList(GameContainer container) throws SlickException {
-		GameState gs = new GameState();
-		addState(gs);
+		addState(new GameState());
 	}
 
 	public static void main(String[] args) throws SlickException {
