@@ -13,7 +13,11 @@
     
     <images file="chat.png" format="RGBA" filter="linear">
         <area name="tooltip.background" border="3" xywh="1,24,7,7" splitx="L3,R3" splity="T3,B3"/>
-        <area name="evilframe.background" border="27,10,10,10" xywh="40,1,20,29" splitx="L20,R2" splity="T18,B12"/>
+        <area name="evilframe.background" border="27,10,10,10" xywh="40,1,20,29" splitx="L5,R5" splity="T19,B5"/>
+        
+        <area name="evilframe.status.background" border="27,10,10,10" xywh="40,1,20,29" splitx="L5,R5" splity="T19,B5"/>
+        
+        <area name="statusbar.background" border="27,10,10,10" xywh="40,7,20,11" splitx="L6,R5" splity="T10,B10"/>        
         
         <area name="-innerframe.background" splitx="2,3" splity="2,3" xywh="17,1,5,5"/>
         <select name="innerframe.background" border="2">
@@ -72,8 +76,8 @@
 	 </theme>
 	 
      <theme name="statusbar" ref="-defaults">
-		<param name="border"><border>evilframe.background</border></param>
-	    <param name="background"><image>evilframe.status.background</image></param>
+		<param name="border"><border>background.border</border></param>
+	    <param name="background"><image>statusbar.background</image></param>
         <param name="defaultGap"><dimension>5,5</dimension></param>
         <param name="smallGap"><dimension>8,8</dimension></param>
         <param name="mediumGap"><dimension>10,10</dimension></param>

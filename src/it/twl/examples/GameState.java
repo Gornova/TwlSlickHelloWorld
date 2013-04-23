@@ -41,16 +41,15 @@ public class GameState extends BasicTWLGameState {
 			}
 		});
 
-		// statusBar.setHorizontalGroup(statusBar.createSequentialGroup()
-		// .addGap("statusRight")
-		// .addGroups(statusBar.createParallelGroup(button)));
-		// statusBar.setVerticalGroup(statusBar.createSequentialGroup(button));
-
 		Label label = new Label();
 		label.setText("Info 1");
 
-		Group hz = statusBar.createParallelGroup(label);
-		Group vz = statusBar.createParallelGroup(button);
+		Group hz = statusBar.createParallelGroup(statusBar
+				.createSequentialGroup().addMinGap(DialogLayout.DEFAULT_GAP)
+				.addWidget(label));
+		Group vz = statusBar.createParallelGroup(statusBar
+				.createSequentialGroup().addMinGap(DialogLayout.DEFAULT_GAP)
+				.addWidget(button));
 
 		Group horizontal = statusBar.createSequentialGroup(hz, vz);
 
@@ -137,25 +136,25 @@ public class GameState extends BasicTWLGameState {
 		buttonPanel.adjustSize();
 
 		statusBar.setPosition(0, 0);
-		statusBar.setSize(1024, 50);
+		statusBar.setSize(1024, 30);
 	}
 
 	@Override
 	public void init(GameContainer arg0, StateBasedGame arg1)
 			throws SlickException {
-		// TODO Auto-generated method stub
+		// Your slick logic here
 	}
 
 	@Override
 	public void render(GameContainer arg0, StateBasedGame arg1, Graphics arg2)
 			throws SlickException {
-		// TODO Auto-generated method stub
+		// Your slick logic here
 	}
 
 	@Override
 	public void update(GameContainer arg0, StateBasedGame arg1, int arg2)
 			throws SlickException {
-		// TODO Auto-generated method stub
+		// Your slick logic here
 	}
 
 	@Override
