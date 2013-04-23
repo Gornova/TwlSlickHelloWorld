@@ -16,7 +16,7 @@ public class HelloWorldStateTwl extends TWLStateBasedGame {
 
 	@Override
 	protected URL getThemeURL() {
-		return HelloWorldStateTwl.class.getResource("simple.xml");
+		return getClass().getResource("simple.xml");
 	}
 
 	@Override
